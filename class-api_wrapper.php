@@ -1,8 +1,4 @@
 <?php
-
-require 'autoload.php';
-require 'classes/autoload.php';
-
 /**
  * Class ThreeCentralApiWrapper
  * --

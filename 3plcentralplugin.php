@@ -11,6 +11,9 @@ Version: 1.0
 Author URI: http://www.thomasc.me
 */
 
+require 'autoload.php';
+require 'classes/autoload.php';
+
 /*
  * 3PL Central Plugin API Options.
  * */
@@ -153,11 +156,5 @@ function three_central_plugin_options()
 
 }
 
-
-add_action('woocommerce_new_order', 'my_method', 1, 1);
-
-function my_method($order_id)
-{
-    $order = new WC_Order($order_id);
-    error_log($order->get_view_order_url());
-}
+add_action( 'save_post_shop_order', 'process_order', 10, 3 );
+function process_order( $post_id, $post, $update ){ }

@@ -1,6 +1,7 @@
 <?php
 
 
+spl_autoload_register('autoload_e13eecb25591b4bd6bff123087cd2a3b');
  function autoload_e13eecb25591b4bd6bff123087cd2a3b($class)
 {
     $classes = array(
@@ -99,13 +100,8 @@
         'ArrayOfExternalFacility' => __DIR__ .'/ArrayOfExternalFacility.php',
         'ExternalFacility' => __DIR__ .'/ExternalFacility.php'
     );
-    if (!empty($classes[$class])) {
+    if (!empty($classes[$class]) && file_exists($classes[$class])) {
         include $classes[$class];
     };
 }
-
-spl_autoload_register('autoload_e13eecb25591b4bd6bff123087cd2a3b');
-
-// Do nothing. The rest is just leftovers from the code generation.
-{
-}
+?>

@@ -1,8 +1,4 @@
 <?php
-
-require 'autoload.php';
-require 'classes/autoload.php';
-
 /**
  * Class ThreeCentralAPI
  * --
@@ -68,7 +64,6 @@ class ThreeCentralAPI
      */
     public function __construct($api_key, $api_id, $api_customer_id, $api_facility_id, $api_login, $api_password)
     {
-
         // Associate all object variables with constructor variables;
         $this->api_key = $api_key;
         $this->api_id = $api_id;
